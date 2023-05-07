@@ -1,0 +1,27 @@
+package boltwise;
+
+/**
+ * @author Darrin Donahue
+ *
+ */
+public class FastenerDataProcessor {
+	String type; 	// It's a String so we can add other types in the future (currently bolt or screw)
+	String length; 	// It's a String to make sizes such as 5/8 easy to recognize
+	String material;// Such as steel or cooper
+	String grade; 	// Grade 8, Grade C, etc...
+	String finish;	// Chrome, Plain, etc...
+	String name;	// Just about anything
+	String SKU;		// Unique identifier
+	Integer quantity; // Has to be 0 and above
+	String URL;
+	
+	private HashMap<String, >
+	
+	/**
+	 * Insert an item.  Check the SKU to see if it already exists
+	 */
+	boolean insertData(String type, String length, String material, String grade, String finish, String name, String SKU, Integer quantity, String URL) {
+		
+		return true;
+	}
+}

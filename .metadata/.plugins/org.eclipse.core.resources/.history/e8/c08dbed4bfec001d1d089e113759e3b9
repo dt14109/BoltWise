@@ -1,0 +1,47 @@
+/**
+ * 
+ */
+package src.test;
+
+import static org.junit.jupiter.api.Assertions.*;
+
+import org.junit.jupiter.api.Test;
+
+import src.main.FastenerDataEndpoint;
+import src.main.FastenerData;
+
+/**
+ * @author Darrin Donahue
+ *
+ */
+class FastenerTest {
+	FastenerDataEndpoint endpoint = new FastenerDataEndpoint();
+
+	@Test
+	void noItems() {
+		// do immediate return without any data
+		
+	}
+
+	@Test
+	void nullSKU() {
+		// try to insert an item with a null SKU
+		FastenerData data = new FastenerData("type", "length", "material", "grade", "finish", "name", null, 10, "uRL");
+	}
+
+	@Test
+	void blankSKU() {
+		// try to insert an item with a blank SKU
+		FastenerData data = new FastenerData("type", "length", "material", "grade", "finish", "name", "", 10, "uRL");
+		
+	}
+
+	@Test
+	void threeItems() {
+		// Insert 3 items and then read them
+		FastenerData data = new FastenerData("type", "length", "material", "grade", "finish", "name", null, 10, "uRL");
+		FastenerData data1 = new FastenerData("type", "length", "material", "grade", "finish", "name", null, 10, "uRL");
+		FastenerData data2 = new FastenerData("type", "length", "material", "grade", "finish", "name", null, 10, "uRL");
+		
+	}
+}

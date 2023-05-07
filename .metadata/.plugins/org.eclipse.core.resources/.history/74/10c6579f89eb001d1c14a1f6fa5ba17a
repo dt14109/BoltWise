@@ -1,0 +1,26 @@
+package boltwise;
+
+import java.util.Map;
+import java.util.HashMap;
+
+/**
+ * @author Darrin Donahue
+ * Class to process the FastenerData
+ */
+public class FastenerDataProcessor {
+	// Map of our data with SKU as our key
+	private Map<String, FastenerData> map = new HashMap<>();
+	
+	/**
+	 * Insert an item.  Check the SKU to see if it already exists
+	 */
+	public boolean insertData(String type, String length, String material, String grade, String finish, String name, String SKU, Integer quantity, String URL) {
+		FastenerData data = new FastenerData(type, length, material, grade, finish, name, SKU, quantity, URL);
+		map.putIfAbsent(SKU, data);
+		return true;
+	}
+	
+	public Map<String, FastenerData> getAllData() {
+		return map;
+	}
+}

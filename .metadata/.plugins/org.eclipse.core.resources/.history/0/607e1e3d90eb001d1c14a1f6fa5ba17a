@@ -1,0 +1,31 @@
+/**
+ * 
+ */
+package src.test;
+
+import static org.junit.jupiter.api.Assertions.*;
+
+import org.junit.jupiter.api.Test;
+
+import src.main.FastenerDataEndpoint;
+
+/**
+ * @author Darrin Donahue
+ *
+ */
+class FastenerTest {
+	FastenerDataEndpoint endpoint = new FastenerDataEndpoint();
+
+	@Test
+	void noItems() {
+		// do immediate return without any data
+		
+	}
+
+	@Test
+	void threeItems() {
+		// Insert 3 items and then read them
+		
+	}
+
+}
